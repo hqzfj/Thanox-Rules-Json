@@ -1,7 +1,7 @@
 [
 {
 "name": "③屏幕关闭时，定时开关耗电功能进程及休眠指定应用",
-"description": "后半夜定时定时晚上1点半到次日早5点半开关wifi、定位、数据、蓝牙进程并休眠指定常开应用（微信、qq等），全局变量DSKILL应用列表--酷安@看灰机FJ",
+"description": "后半夜定时定时晚上1点半到次日早5点半开关wifi、定位、数据、蓝牙进程并休眠指定常开应用（微信、qq等），全局变量DSKILL应用列表--酷安@看灰机_FJ",
 "priority": 1,
 "condition": "if( ((System.currentTimeMillis()/3600000)%24==24+1.5-8) && screenOff == true ) { Thread.currentThread().sleep(1000) + hw.disableWifi() + hw.disableBT() + hw.disableLocation() + hw.disableNfc() + data.setDataEnabled(false) + for (String s : globalVarOf$DSKILL){ if( task.hasTaskFromPackage(s)){ ui.showShortToast(\"关闭杀死并休眠\" +s)+killer.killPackage(s)+activity.setInactive(s)+task.removeTasksForPackage(s) } } } else if ( ((System.currentTimeMillis()/3600000)%24==24+5.5-8) && screenOff == false ) { Thread.currentThread().sleep(1000) + hw.enableWifi() + for (String s : globalVarOf$DSKILL){ui.showShortToast(\"打开\" +s)+activity.launchProcessForPackage(s)} }",
 "actions": [
