@@ -1,7 +1,7 @@
 [
 {
 "name": "②灭屏清理杀死后台并休眠",
-"description": "②灭屏清理杀死后台并休眠，需要全局变量APPKILL 列表中的应用--酷安@看灰机！",
+"description": "②灭屏清理杀死后台并休眠，需要全局变量APPKILL 列表中的应用--酷安@看灰机FJ",
 "priority": 1,
 "condition": "screenOff == true",
 "actions": [
