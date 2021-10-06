@@ -1,0 +1,10 @@
+[
+{
+"name": "⑤数据和wifi",
+"description": "连上wifi，关闭数据，断开连接，开启数据",
+"priority": 1,
+"condition": "if( wifiStateChanged == true && wifiState.ssid == null && data.isDataEnabled() == false) { ui.showShortToast(\"打开数据流量\") + data.setDataEnabled(true) } else if ( wifiStateChanged == true && wifiState.enabled == true && wifiState.ssid != null && data.isDataEnabled()== true) { ui.showShortToast(\"关闭数据流量\") + data.setDataEnabled(false) }",
+"actions": [""
+]
+}
+]

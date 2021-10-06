@@ -1,0 +1,11 @@
+[
+{
+"name": "④打开微信位置共享、小程序及定位界面自动开关GPS",
+"description": "打开微信位置共享、小程序及定位界面时打开GPS，返回微信聊天界面时关闭GPS，使用全局变量WEIXINGPS--酷安@幻觉",
+"priority": 1,
+"condition": "if( activityResumed == true && hw.isLocationEnabled() == false && globalVarOf$WEIXINGPS.contains(componentNameAsShortString)) { ui.showShortToast(\"GPS打开\" + (hw.enableLocation() ? \"成功\" : \"失败\")) } else if ( activityResumed == true && hw.isLocationEnabled() == true && componentNameAsShortString == \"com.tencent.mm/.ui.LauncherUI\") { ui.showShortToast(\"GPS关闭\" + (hw.disableLocation() ? \"成功\" : \"失败\")) }",
+"actions": [
+""
+]
+}
+]

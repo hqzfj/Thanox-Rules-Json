@@ -1,0 +1,13 @@
+[
+{
+"name": "a⑪指定保活APP",
+"description": "指定APP被杀死时，重新启动全局变量APPBH--酷安@幻觉",
+"priority": 1,
+"condition": "pkgKilled == true && globalVarOf$APPBH.contains(pkgName)",
+"actions": [
+"ui.showShortToast(\"启动\" + pkgName);",
+"activity.launchProcessForPackage(pkgName)",
+"activity.launchMainActivityForPackage(pkgName)"
+]
+}
+]

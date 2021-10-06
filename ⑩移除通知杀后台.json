@@ -1,0 +1,11 @@
+[
+{
+"name": "a⑩移除通知杀后台",
+"description": "移除通知杀应用，应用名单来自全局变量notikill。酷安@幻觉",
+"priority": 1,
+"condition": "notificationRemoved == true && globalVarOf$notikill.contains(pkgName)",
+"actions": [
+"killer.killPackage(pkgName);"
+]
+}
+]

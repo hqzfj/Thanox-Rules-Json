@@ -1,0 +1,2 @@
+命令：dumpsys deviceidle
+查看 mForceIdle=是否true及mState=是否idle

@@ -1,0 +1,12 @@
+[
+{
+"name": "⑥蓝牙耳机控制",
+"description": "关闭蓝牙耳机10秒后关闭蓝牙",
+"priority": 2,
+"condition": "btConnectionStateChanged == true && btConnectionStateConnected == false && btConnectionStateDisconnected==true",
+"actions":[
+"sh.exe(\"sleep 10s\");",
+"(btConnectionStateChanged == true && btConnectionStateConnected == false && btConnectionStateDisconnected==true)?(ui.showShortToast(\"正在关闭蓝牙...\")+ui.showShortToast(\"蓝牙关闭\"+(hw.disableBT() ? \"成功\" : \"失败\"))+killer.killPackage(\"com.netease.cloudmusic\")+task.removeTasksForPackage(\"com.netease.cloudmusic\")):ui.showShortToast(\"不动作\");"
+]
+}
+]
