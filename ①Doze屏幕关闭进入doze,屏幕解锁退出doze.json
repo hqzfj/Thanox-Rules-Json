@@ -1,7 +1,7 @@
 [
 {
 "name": "①Doze:屏幕关闭进入doze，屏幕解锁退出doze",
-"description": "thanox需启用Lelinux宽容模式才能执行adb sh，屏幕关闭10秒后关闭强制进入doze，屏幕解锁退出doze--酷安@看灰机！",
+"description": "thanox需启用Lelinux宽容模式才能执行adb sh，屏幕关闭10秒后关闭强制进入doze，屏幕解锁退出doze--酷安@看灰机FJ",
 "priority": 3,
 "condition": "if(screenOff == true){ ui.showShortToast(\"进入打盹Doze模式\")+sh.exe(\"sleep 10s\")+sh.exe(\"dumpsys deviceidle enable\")+sh.exe(\"dumpsys deviceidle force-idle\") } else if(userPresent == true){ sh.exe(\"dumpsys deviceidle disable\") + ui.showShortToast(\"退出打盹Doze模式\") }",
 "actions": [
