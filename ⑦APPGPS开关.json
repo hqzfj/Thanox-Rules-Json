@@ -1,6 +1,6 @@
 [
 {
-"name": "⑥APPGPS开关",
+"name": "⑦APPGPS开关",
 "description": "打开应用开启GPS，关闭应用(3000毫秒＝3秒)后关闭GPS，使用全局变量APPGPS--酷安@幻觉",
 "priority": 1,
 "condition": "if(frontPkgChanged == true && globalVarOf$APPGPS.contains(to)) { (hw.enableLocation() ? \"打开GPS成功\" : \"打开GPS失败\") } else if ( pkgKilled == true && globalVarOf$APPGPS.contains(pkgName)) {Thread.sleep(3000) + (hw.disableLocation() ? \"关闭GPS成功\" : \"关闭GPS失败\") }",
